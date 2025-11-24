@@ -1,0 +1,80 @@
+services:
+  smartshop-db:
+    image: postgres:15-alpine
+    container_name: smartshop-db
+    profiles: [ "default" ]
+    environment:
+     POSTGRES_DB: smartshop_db
+     POSTGRES_USER: ${POSTGRES_USER}
+     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    networks:
+      - smartshop-network
+    volumes:
+      - smartshop-data:/var/lib/postgres/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U aliyara29" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: smartshop-pgadmin
+    profiles: [ "default" ]
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    networks:
+      - smartshop-network
+    depends_on:
+      - smartshop-db
+
+  sonar-db:
+    image: postgres:15
+    container_name: smartshop-sonar-db
+    profiles: [ "sonar" ]
+    environment:
+      POSTGRES_USER: sonar
+      POSTGRES_PASSWORD: sonar
+      POSTGRES_DB: sonarqube
+    volumes:
+      - sonar-db-data:/var/lib/postgresql/data
+    networks:
+      - smartshop-network
+
+  sonarqube:
+    image: sonarqube:community
+    container_name: smartshop-sonarqube
+    profiles: [ "sonar" ]
+    depends_on:
+      - sonar-db
+    ports:
+      - "9001:9000"
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://sonar-db:5432/sonarqube
+      SONAR_JDBC_USERNAME: sonar
+      SONAR_JDBC_PASSWORD: sonar
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+    networks:
+      - smartshop-network
+
+networks:
+ smartshop-network:
+   driver: bridge
+
+volumes:
+  smartshop-data:
+  pgadmin-data:
+  sonar-db-data:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:
