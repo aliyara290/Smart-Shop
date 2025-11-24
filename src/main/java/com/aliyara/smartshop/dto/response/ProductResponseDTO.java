@@ -1,4 +1,11 @@
 package com.aliyara.smartshop.dto.response;
 
-public class ProductResponseDTO {
+import lombok.Builder;
+
+@Builder
+public record ProductResponseDTO(
+        String name,
+        double unitPrice,
+        int stock
+) {
 }
