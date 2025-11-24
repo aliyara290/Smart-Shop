@@ -1,4 +1,14 @@
 package com.aliyara.smartshop.dto.response;
 
-public class PaymentResponseDTO {
+import lombok.Builder;
+import java.time.LocalDateTime;
+
+@Builder
+public record PaymentResponseDTO (
+        String paymentType,
+        String paymentStatus,
+        double amount,
+        LocalDateTime paymentDate,
+        LocalDateTime collectionDate
+) {
 }
