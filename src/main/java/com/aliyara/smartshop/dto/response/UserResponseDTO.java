@@ -1,4 +1,13 @@
 package com.aliyara.smartshop.dto.response;
 
-public class UserResponseDTO {
+import lombok.Builder;
+
+@Builder
+public record UserResponseDTO(
+        String firstName,
+        String lastName,
+        String email,
+        String password,
+        String roleName
+) {
 }
