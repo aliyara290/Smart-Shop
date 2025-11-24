@@ -1,4 +1,15 @@
 package com.aliyara.smartshop.dto.response;
 
-public class OrderResponseDTO {
+import lombok.Builder;
+
+import java.util.List;
+@Builder
+public record OrderResponseDTO(
+        double subtotal,
+        double total,
+        double VAT,
+        String promoCode,
+        String status,
+        List<OrderItemResponseDTO> orderItems
+) {
 }
