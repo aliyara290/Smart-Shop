@@ -1,4 +1,11 @@
 package com.aliyara.smartshop.payload;
 
-public record ApiResponse() {
+import java.time.LocalDateTime;
+
+public record ApiResponse<T>(
+        Integer status,
+        String message,
+        LocalDateTime timestamp,
+        T data
+) {
 }
