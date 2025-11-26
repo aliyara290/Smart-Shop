@@ -4,12 +4,8 @@ import lombok.Builder;
 
 @Builder
 public record ClientResponseDTO (
-        String firstName,
-        String lastName,
-        String email,
-        String password,
-        String role,
-        boolean isActive,
+        String id,
+        UserResponseDTO user,
         String loyaltyLevel
 ) {
 }
