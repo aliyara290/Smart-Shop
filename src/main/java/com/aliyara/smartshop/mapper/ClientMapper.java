@@ -11,8 +11,6 @@ import org.mapstruct.MappingTarget;
 @Mapper(componentModel = "spring", uses = {UserResponseDTO.class})
 public interface ClientMapper {
     ClientResponseDTO toResponse(Client client);
-//    @Mapping(target = "loyaltyLevel", ignore = true)
     Client toEntity(ClientRequestDTO requestDTO);
-
     void updateClientFromDTO(ClientRequestDTO requestDTO, @MappingTarget Client client);
 }

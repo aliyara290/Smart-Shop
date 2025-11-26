@@ -9,7 +9,7 @@ import java.util.List;
 public interface ProductService {
     ProductResponseDTO create(ProductRequestDTO requestDTO);
     ProductResponseDTO update(ProductRequestDTO requestDTO, String id);
-    ApiResponse<Void> delete(String id);
+    ApiResponse<Void> softDelete(String id);
     ProductResponseDTO findById(String id);
     List<ProductResponseDTO> getAllProducts();
 }

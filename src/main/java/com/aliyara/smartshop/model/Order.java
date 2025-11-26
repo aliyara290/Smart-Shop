@@ -3,6 +3,7 @@ package com.aliyara.smartshop.model;
 import com.aliyara.smartshop.model.enums.OrderStatus;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -28,8 +29,9 @@ public class Order {
 
     private double discount = 0.0;
 
+    @Value("${vat.value}")
     @Column(nullable = false)
-    private double VAT = 0.2;
+    private double VAT;
 
     @Column(nullable = false)
     private double total = 0;
@@ -44,7 +46,11 @@ public class Order {
     @Column(nullable = false)
     private double remaining = 0.0;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "order_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "client_id")
+    private Client client;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 
     public void addItem(OrderItem orderItem) {

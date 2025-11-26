@@ -3,6 +3,7 @@ package com.aliyara.smartshop.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @AllArgsConstructor
@@ -26,6 +27,9 @@ public class Product {
     @Column(name = "stock", nullable = false)
     private int stock = 0;
 
-    @OneToMany(mappedBy = "product_id", fetch = FetchType.LAZY)
-    private List<OrderItem> orderItems;
+    @Column(name = "deleted")
+    private boolean deleted;
+
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
 }
