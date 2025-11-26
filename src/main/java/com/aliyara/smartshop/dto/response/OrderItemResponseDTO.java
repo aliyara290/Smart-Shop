@@ -2,9 +2,11 @@ package com.aliyara.smartshop.dto.response;
 
 import lombok.Builder;
 
+import java.util.UUID;
+
 @Builder
 public record OrderItemResponseDTO (
-        String id,
+        UUID id,
         int quantity,
         ProductResponseDTO product
 ) {

@@ -7,12 +7,13 @@ import com.aliyara.smartshop.dto.response.ProductResponseDTO;
 import com.aliyara.smartshop.payload.ApiResponse;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface PaymentService {
     PaymentResponseDTO create(PaymentRequestDTO requestDTO);
-    PaymentResponseDTO update(PaymentRequestDTO requestDTO, String id);
-    ApiResponse<Void> delete(String id);
-    PaymentResponseDTO findById(String id);
+    PaymentResponseDTO update(PaymentRequestDTO requestDTO, UUID id);
+    ApiResponse<Void> delete(UUID id);
+    PaymentResponseDTO findById(UUID id);
     List<PaymentResponseDTO> getAllPayments();
 }
 

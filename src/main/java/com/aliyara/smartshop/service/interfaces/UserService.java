@@ -7,11 +7,12 @@ import com.aliyara.smartshop.model.User;
 import com.aliyara.smartshop.payload.ApiResponse;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface UserService {
     UserResponseDTO create(UserRequestDTO requestDTO);
-    UserResponseDTO update(UserRequestDTO requestDTO, String id);
-    ApiResponse<Void> delete(String id);
-    UserResponseDTO findById(String id);
+    UserResponseDTO update(UserRequestDTO requestDTO, UUID id);
+    ApiResponse<Void> delete(UUID id);
+    UserResponseDTO findById(UUID id);
     List<UserResponseDTO> getAllUsers();
 }

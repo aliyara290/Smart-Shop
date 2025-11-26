@@ -3,6 +3,8 @@ package com.aliyara.smartshop.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.UUID;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -13,7 +15,7 @@ import lombok.*;
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     @Column(nullable = false)
     private int quantity = 1;

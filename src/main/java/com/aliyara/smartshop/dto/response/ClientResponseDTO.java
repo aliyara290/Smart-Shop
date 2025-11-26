@@ -2,9 +2,11 @@ package com.aliyara.smartshop.dto.response;
 
 import lombok.Builder;
 
+import java.util.UUID;
+
 @Builder
 public record ClientResponseDTO (
-        String id,
+        UUID id,
         UserResponseDTO user,
         String loyaltyLevel
 ) {

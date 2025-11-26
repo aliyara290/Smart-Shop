@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +20,7 @@ import java.util.List;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
 
     @Column(nullable = false, name = "order_date")
     private LocalDateTime orderDate = LocalDateTime.now();

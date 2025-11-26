@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -22,24 +23,23 @@ public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
     private final OrderMapper orderMapper;
 
-
     @Override
     public OrderResponseDTO create(OrderRequestDTO requestDTO) {
         return null;
     }
 
     @Override
-    public OrderResponseDTO update(OrderRequestDTO requestDTO, String id) {
+    public OrderResponseDTO update(OrderRequestDTO requestDTO, UUID id) {
         return null;
     }
 
     @Override
-    public ApiResponse<Void> softDelete(String id) {
+    public ApiResponse<Void> softDelete(UUID id) {
         return null;
     }
 
     @Override
-    public OrderResponseDTO findById(String id) {
+    public OrderResponseDTO findById(UUID id) {
         return null;
     }
 

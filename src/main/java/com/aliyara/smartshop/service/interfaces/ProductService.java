@@ -5,11 +5,12 @@ import com.aliyara.smartshop.dto.response.ProductResponseDTO;
 import com.aliyara.smartshop.payload.ApiResponse;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface ProductService {
     ProductResponseDTO create(ProductRequestDTO requestDTO);
-    ProductResponseDTO update(ProductRequestDTO requestDTO, String id);
-    ApiResponse<Void> softDelete(String id);
-    ProductResponseDTO findById(String id);
+    ProductResponseDTO update(ProductRequestDTO requestDTO, UUID id);
+    ApiResponse<Void> softDelete(UUID id);
+    ProductResponseDTO findById(UUID id);
     List<ProductResponseDTO> getAllProducts();
 }

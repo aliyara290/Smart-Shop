@@ -22,6 +22,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
+
 @Slf4j
 @RequiredArgsConstructor
 @Transactional
@@ -47,7 +49,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientResponseDTO update(ClientRequestDTO requestDTO, String id) {
+    public ClientResponseDTO update(ClientRequestDTO requestDTO, UUID id) {
         Client exisitngClient = clientRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User with ID " + id + " not exist!"));
 
@@ -61,7 +63,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ApiResponse<Void> softDelete(String id) {
+    public ApiResponse<Void> softDelete(UUID id) {
         Client client = clientRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Client with ID " + id + " not exist!"));
         if(!client.getUser().isDeleted()) {
@@ -72,7 +74,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientResponseDTO findById(String id) {
+    public ClientResponseDTO findById(UUID id) {
         Client client = clientRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Client with ID " + id + " not exist!"));
         return clientMapper.toResponse(client);

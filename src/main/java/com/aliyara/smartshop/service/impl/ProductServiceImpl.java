@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -33,7 +34,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductResponseDTO update(ProductRequestDTO requestDTO, String id) {
+    public ProductResponseDTO update(ProductRequestDTO requestDTO, UUID id) {
         Product existingProduct = productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Product with ID: " + id + " not found!"));
         productMapper.updateProductFromDTO(requestDTO, existingProduct);
@@ -42,7 +43,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ApiResponse<Void> softDelete(String id) {
+    public ApiResponse<Void> softDelete(UUID id) {
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Product with ID: " + id + " not found!"));
         if(!product.isDeleted()) {
@@ -53,7 +54,7 @@ public class ProductServiceImpl implements ProductService {
      }
 
     @Override
-    public ProductResponseDTO findById(String id) {
+    public ProductResponseDTO findById(UUID id) {
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Product with ID " + id + " not exist!"));
         return productMapper.toResponse(product);

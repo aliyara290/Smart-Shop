@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
@@ -27,20 +28,20 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ApiResponse<ProductResponseDTO>> updateProduct(@Valid @RequestBody ProductRequestDTO requestDTO, @PathVariable String id) {
+    public ResponseEntity<ApiResponse<ProductResponseDTO>> updateProduct(@Valid @RequestBody ProductRequestDTO requestDTO, @PathVariable UUID id) {
         ProductResponseDTO updatedProduct = productService.update(requestDTO, id);
         ApiResponse<ProductResponseDTO> response = new ApiResponse<>(true, "Product updated successfully", LocalDateTime.now(), updatedProduct);
         return ResponseEntity.ok().body(response);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ApiResponse<Void>> deleteProduct(@PathVariable String id) {
+    public ResponseEntity<ApiResponse<Void>> deleteProduct(@PathVariable UUID id) {
         ApiResponse<Void> deletedProduct = productService.softDelete(id);
         return ResponseEntity.ok().body(deletedProduct);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ApiResponse<ProductResponseDTO>> getProduct(@PathVariable String id) {
+    public ResponseEntity<ApiResponse<ProductResponseDTO>> getProduct(@PathVariable UUID id) {
         ProductResponseDTO product = productService.findById(id);
         ApiResponse<ProductResponseDTO> response = new ApiResponse<>(true, "Product fetched successfully!", LocalDateTime.now(), product);
         return ResponseEntity.ok().body(response);
