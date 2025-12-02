@@ -18,20 +18,16 @@ public class DiscountServiceImpl implements DiscountService {
 
     @Override
     public double calculateDiscount(Order order) {
-        log.debug("im inside Discount service");
-        double subtotal = order.getSubtotal();
-        log.debug("subtotal {}", subtotal);
+        log.debug("inside DiscountService, subtotal={}", order.getSubtotal());
+
+        double totalDiscount = 0.0;
+
         double loyaltyDiscount = loyaltyDiscountStrategy.apply(order);
+        totalDiscount += loyaltyDiscount;
 
-        if(loyaltyDiscount > 0) {
-            subtotal -= loyaltyDiscount;
-        }
-        double promoCodeDiscount = promoCodeDiscountStrategy.apply(order);
+        double promoDiscount = promoCodeDiscountStrategy.apply(order);
+        totalDiscount += promoDiscount;
 
-        if(promoCodeDiscount > 0) {
-            subtotal -= promoCodeDiscount;
-        }
-
-        return order.getSubtotal() - subtotal;
+        return totalDiscount;
     }
 }

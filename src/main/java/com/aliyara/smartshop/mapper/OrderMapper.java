@@ -30,7 +30,7 @@ public interface OrderMapper {
             @Mapping(target = "status", ignore = true),
             @Mapping(target = "remaining", ignore = true),
             @Mapping(target = "client", ignore = true),
-            @Mapping(target = "isDeleted", ignore = true),
+            @Mapping(target = "deleted", ignore = true),
             @Mapping(target = "deletedAt", ignore = true),
             @Mapping(target = "createdAt", ignore = true),
             @Mapping(target = "promoCode", ignore = true)

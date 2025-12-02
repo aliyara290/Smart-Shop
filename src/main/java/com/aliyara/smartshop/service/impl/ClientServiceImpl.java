@@ -93,25 +93,27 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public void updateClientLoyaltyLevel(UUID id) {
-        Client client = clientRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Client with ID " + id + " not exist!"));
+    public void updateClientLoyaltyLevel(Client client) {
+        long clientOrdersCount = orderRepository.countByClientIdAndStatus(client.getId(), OrderStatus.CONFIRMED);
+        Double clientCumulative = orderRepository.getConfirmedTotal(client.getId());
 
-        long clientOrdersCount = orderRepository.countByClientIdAndStatus(id, OrderStatus.CONFIRMED);
-        Double clientCumulative = orderRepository.getConfirmedTotal(id);
-
-        Double total = clientCumulative != null ? clientCumulative : 0.0;
+        double total = clientCumulative != null ? clientCumulative : 0.0;
 
         if (clientOrdersCount >= 20 || total >= 15000.0) {
+            log.debug("20 order");
             client.setLoyaltyLevel(ClientLoyaltyLevel.PLATINUM);
         } else if (clientOrdersCount >= 10 || total >= 5000.0) {
+            log.debug("10 order");
             client.setLoyaltyLevel(ClientLoyaltyLevel.GOLD);
         } else if (clientOrdersCount >= 3 || total >= 1000.0) {
+            log.debug("3 order");
             client.setLoyaltyLevel(ClientLoyaltyLevel.SILVER);
         } else {
+            log.debug("0 order");
             client.setLoyaltyLevel(ClientLoyaltyLevel.BASIC);
         }
 
+        log.debug("hello im here");
         clientRepository.save(client);
     }
 }

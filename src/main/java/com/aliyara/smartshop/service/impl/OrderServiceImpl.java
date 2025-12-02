@@ -3,6 +3,7 @@ package com.aliyara.smartshop.service.impl;
 import com.aliyara.smartshop.dto.request.OrderItemRequestDTO;
 import com.aliyara.smartshop.dto.request.OrderRequestDTO;
 import com.aliyara.smartshop.dto.response.OrderResponseDTO;
+import com.aliyara.smartshop.enums.OrderStatus;
 import com.aliyara.smartshop.exception.InsufficientStockException;
 import com.aliyara.smartshop.exception.ResourceNotFoundException;
 import com.aliyara.smartshop.mapper.OrderMapper;
@@ -12,11 +13,13 @@ import com.aliyara.smartshop.repository.ClientRepository;
 import com.aliyara.smartshop.repository.OrderRepository;
 import com.aliyara.smartshop.repository.ProductRepository;
 import com.aliyara.smartshop.repository.PromoCodeRepository;
+import com.aliyara.smartshop.service.interfaces.ClientService;
 import com.aliyara.smartshop.service.interfaces.DiscountService;
 import com.aliyara.smartshop.service.interfaces.OrderService;
 import com.aliyara.smartshop.service.interfaces.PromoCodeService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +31,9 @@ import java.util.UUID;
 @Transactional
 @Service
 public class OrderServiceImpl implements OrderService {
+    @Value("${vat.value}")
+    private double vat;
+
     private final OrderRepository orderRepository;
     private final OrderMapper orderMapper;
     private final ClientRepository clientRepository;
@@ -35,31 +41,30 @@ public class OrderServiceImpl implements OrderService {
     private final PromoCodeService promoCodeService;
     private final DiscountService discountService;
     private final ProductRepository productRepository;
+    private final ClientService clientService;
 
     @Override
     public OrderResponseDTO create(OrderRequestDTO requestDTO) {
-//        Order order = orderMapper.toEntity(requestDTO);
         Order order = new Order();
+        order.setVAT(vat);
         Client client = clientRepository.findById(requestDTO.getClientId())
                 .orElseThrow(() -> new ResourceNotFoundException("Client not found!"));
+        clientService.updateClientLoyaltyLevel(client);
         order.setClient(client);
+
         double subtotal = 0.0;
 
         for (OrderItemRequestDTO orderItem : requestDTO.getOrderItems()) {
             Product product = productRepository.findById(orderItem.getProductId())
                     .orElseThrow(() -> new ResourceNotFoundException("Product with ID" + orderItem.getProductId() + " not found!"));
-            boolean available = checkIfStockAvailable(product, orderItem.getQuantity());
-            if(available) {
-                OrderItem item = new OrderItem();
-                item.setQuantity(orderItem.getQuantity());
-                item.setProduct(product);
-                item.setOrder(order);
-                item.setTotalLine(product.getUnitPrice() * orderItem.getQuantity());
-                subtotal += item.getTotalLine();
-                order.addItem(item);
-            } else {
-                throw new InsufficientStockException("Insufficient Stock for " + product.getName());
-            }
+
+            OrderItem item = new OrderItem();
+            item.setQuantity(orderItem.getQuantity());
+            item.setProduct(product);
+            item.setOrder(order);
+            item.setTotalLine(product.getUnitPrice() * orderItem.getQuantity());
+            subtotal += item.getTotalLine();
+            order.addItem(item);
         }
 
         order.setSubtotal(subtotal);
@@ -73,13 +78,18 @@ public class OrderServiceImpl implements OrderService {
                 order.setDiscount(discount);
             }
         }
-        double VAT = (order.getSubtotal() - order.getDiscount()) / order.getVAT();
-        double finalPrice = order.getSubtotal() - VAT;
+        log.debug("subtotal now: {}", order.getSubtotal());
+        double VAT = (order.getSubtotal() - order.getDiscount()) * (order.getVAT() / 100.0);
+        log.debug("discount price now: {}", order.getDiscount());
+        log.debug("vat now: {}", VAT);
+        double finalPrice = (order.getSubtotal() - order.getDiscount()) + VAT;
+        log.debug("final price now: {}", finalPrice);
         order.setTotal(finalPrice);
 
         Order savedOrder = orderRepository.save(order);
-        return orderMapper.toResponse(savedOrder);
 
+        checkIfStockAvailable(savedOrder);
+        return orderMapper.toResponse(savedOrder);
     }
 
     @Override
@@ -102,7 +112,14 @@ public class OrderServiceImpl implements OrderService {
         return List.of();
     }
 
-    public boolean checkIfStockAvailable(Product product, int quantity) {
-        return product.getStock() >= quantity;
+    public void checkIfStockAvailable(Order order){
+        for (OrderItem orderItem : order.getOrderItems()) {
+            Product product = orderItem.getProduct();
+            if(product.getStock() < orderItem.getQuantity()) {
+                order.setStatus(OrderStatus.REJECTED);
+                orderRepository.save(order);
+//                throw new InsufficientStockException("Not enough stock for product: " + product.getName());
+            }
+        }
     }
 }

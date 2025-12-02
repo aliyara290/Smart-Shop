@@ -2,6 +2,7 @@ package com.aliyara.smartshop.service.interfaces;
 
 import com.aliyara.smartshop.dto.request.ClientRequestDTO;
 import com.aliyara.smartshop.dto.response.ClientResponseDTO;
+import com.aliyara.smartshop.model.Client;
 import com.aliyara.smartshop.payload.ApiResponse;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public interface ClientService {
     ApiResponse<Void> softDelete(UUID id);
     ClientResponseDTO findById(UUID id);
     List<ClientResponseDTO> getAllClients();
-    void updateClientLoyaltyLevel(UUID id);
+    void updateClientLoyaltyLevel(Client client);
 }

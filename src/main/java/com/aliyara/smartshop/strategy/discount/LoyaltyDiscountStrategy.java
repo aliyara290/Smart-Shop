@@ -21,13 +21,13 @@ public class LoyaltyDiscountStrategy implements DiscountStrategy {
     public double calculateLoyaltyDiscount(ClientLoyaltyLevel loyaltyLevel, double orderSubTotal) {
         switch (loyaltyLevel) {
             case SILVER -> {
-                return 5.0 * (orderSubTotal / 100);
+                return orderSubTotal >= 500.0 ? 5.0 * (orderSubTotal / 100) : 0.0;
             }
             case GOLD -> {
-                return 10.0 * (orderSubTotal / 100);
+                return orderSubTotal >= 800.0 ? 10.0 * (orderSubTotal / 100) : 0.0;
             }
             case PLATINUM -> {
-                return 15.0 * (orderSubTotal / 100);
+                return orderSubTotal >= 1200.0 ? 15.0 * (orderSubTotal / 100) : 0.0;
             }
             default -> {
                 return 0.0;

@@ -24,7 +24,7 @@ public class PromoCodeDiscountStrategy implements DiscountStrategy {
                     return discount;
                 }
                 case FIXED -> {
-                    discount = Math.max(0, subtotal - promoCode.getDiscountValue());
+                    discount = Math.min(subtotal, promoCode.getDiscountValue());
                     return discount;
                 }
             }
