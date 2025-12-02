@@ -1,8 +1,10 @@
 package com.aliyara.smartshop.model;
 
-import com.aliyara.smartshop.model.enums.OrderStatus;
+import com.aliyara.smartshop.enums.OrderStatus;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLRestriction;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.time.LocalDateTime;
@@ -17,6 +19,8 @@ import java.util.UUID;
 @Setter
 @Entity
 @Table(name = "orders")
+@SQLDelete(sql = "update orders set deleted = true, deleted_at = NOW() where id = ?")
+@SQLRestriction("deleted = false")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -37,8 +41,9 @@ public class Order {
     @Column(nullable = false)
     private double total = 0;
 
-    @Column(name = "promo_code")
-    private String promoCode;
+    @ManyToOne
+    @JoinColumn(name = "promo_code_id")
+    private PromoCode promoCode;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -54,8 +59,23 @@ public class Order {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    @Column(name = "deleted")
+    private boolean deleted;
+
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
+
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
+
     public void addItem(OrderItem orderItem) {
         orderItems.add(orderItem);
+    }
+
+
+    @PrePersist
+    public void updateCreatedAt() {
+        this.createdAt = LocalDateTime.now();
     }
 
 }

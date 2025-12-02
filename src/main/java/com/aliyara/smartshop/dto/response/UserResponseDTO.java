@@ -13,6 +13,7 @@ public record UserResponseDTO(
         String email,
         String role,
         boolean isDeleted,
-        LocalDateTime deletedAt
+        LocalDateTime deletedAt,
+        LocalDateTime createdAt
 ) {
 }

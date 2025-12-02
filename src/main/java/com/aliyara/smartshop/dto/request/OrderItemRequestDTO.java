@@ -2,6 +2,8 @@ package com.aliyara.smartshop.dto.request;
 
 import lombok.*;
 
+import java.util.UUID;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -9,5 +11,5 @@ import lombok.*;
 @Setter
 public class OrderItemRequestDTO {
     private int quantity;
-    private String productId;
+    private UUID productId;
 }

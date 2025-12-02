@@ -11,6 +11,7 @@ public record PaymentResponseDTO (
         String paymentStatus,
         double amount,
         LocalDateTime paymentDate,
-        LocalDateTime collectionDate
+        LocalDateTime collectionDate,
+        LocalDateTime createdAt
 ) {
 }

@@ -3,7 +3,6 @@ package com.aliyara.smartshop.service.interfaces;
 
 import com.aliyara.smartshop.dto.request.UserRequestDTO;
 import com.aliyara.smartshop.dto.response.UserResponseDTO;
-import com.aliyara.smartshop.model.User;
 import com.aliyara.smartshop.payload.ApiResponse;
 
 import java.util.List;

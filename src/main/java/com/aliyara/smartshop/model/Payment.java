@@ -1,9 +1,11 @@
 package com.aliyara.smartshop.model;
 
-import com.aliyara.smartshop.model.enums.PaymentStatus;
-import com.aliyara.smartshop.model.enums.PaymentType;
+import com.aliyara.smartshop.enums.PaymentStatus;
+import com.aliyara.smartshop.enums.PaymentType;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLRestriction;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -15,6 +17,8 @@ import java.util.UUID;
 @Setter
 @Entity
 @Table(name = "payments")
+@SQLDelete(sql = "update payments set deleted = true, deleted_at = NOW() where id = ?")
+@SQLRestriction("deleted = false")
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -36,4 +40,19 @@ public class Payment {
 
     @Column(nullable = false, name = "collection_date")
     private LocalDateTime collectionDate;
+
+    @Column(name = "deleted")
+    private boolean deleted;
+
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
+
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
+
+    @PrePersist
+    public void updateCreatedAt() {
+        this.createdAt = LocalDateTime.now();
+    }
+
 }

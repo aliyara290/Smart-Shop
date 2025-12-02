@@ -13,4 +13,5 @@ public interface ClientService {
     ApiResponse<Void> softDelete(UUID id);
     ClientResponseDTO findById(UUID id);
     List<ClientResponseDTO> getAllClients();
+    void updateClientLoyaltyLevel(UUID id);
 }

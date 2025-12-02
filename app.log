@@ -1,0 +1,223 @@
+2025-12-02T00:43:58.784+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m15s235ms).
+2025-12-02T00:45:15.441+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s662ms).
+2025-12-02T01:33:56.289+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m40s848ms).
+2025-12-02T02:33:47.754+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59m51s465ms).
+2025-12-02T02:35:10.524+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m22s768ms).
+2025-12-02T04:36:58.278+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h1m17s726ms).
+2025-12-02T06:32:09.902+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h55m11s624ms).
+2025-12-02T06:33:30.825+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s923ms).
+2025-12-02T07:38:33.428+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m2s601ms).
+2025-12-02T07:39:49.590+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s165ms).
+2025-12-02T07:41:51.891+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m2s301ms).
+2025-12-02T07:43:08.059+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s168ms).
+2025-12-02T09:34:19.544+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h51m11s485ms).
+2025-12-02T09:36:21.863+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m2s319ms).
+2025-12-02T09:37:38.017+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s154ms).
+2025-12-02T09:39:40.351+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m2s334ms).
+2025-12-02T09:46:14.222+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m33s871ms).
+2025-12-02T11:36:20.775+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h50m6s553ms).
+2025-12-02T11:38:23.106+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m2s331ms).
+2025-12-02T11:39:39.268+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m16s162ms).
+2025-12-02T11:41:41.585+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m2s317ms).
+2025-12-02T11:56:06.965+01:00  WARN 69675 --- [SmartShop] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m25s380ms).
+2025-12-02T11:59:28.613+01:00  INFO 69675 --- [SmartShop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-02T11:59:28.662+01:00  INFO 69675 --- [SmartShop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2025-12-02T11:59:28.704+01:00  INFO 69675 --- [SmartShop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T11:59:28.736+01:00  INFO 69675 --- [SmartShop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-02T11:59:28.746+01:00  INFO 69675 --- [SmartShop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-02T11:59:33.481+01:00  INFO 78534 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Starting SmartShopApplication using Java 17.0.17 with PID 78534 (/Users/aliyara/Documents/Java/Spring-Boot/SmartShop/target/classes started by aliyara in /Users/aliyara/Documents/Java/Spring-Boot/SmartShop)
+2025-12-02T11:59:33.484+01:00 DEBUG 78534 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-02T11:59:33.484+01:00  INFO 78534 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-12-02T11:59:34.162+01:00  INFO 78534 --- [SmartShop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-02T11:59:34.231+01:00  INFO 78534 --- [SmartShop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 6 JPA repository interfaces.
+2025-12-02T11:59:34.591+01:00  INFO 78534 --- [SmartShop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-12-02T11:59:34.603+01:00  INFO 78534 --- [SmartShop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-02T11:59:34.603+01:00  INFO 78534 --- [SmartShop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-02T11:59:34.636+01:00  INFO 78534 --- [SmartShop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1108 ms
+2025-12-02T11:59:34.811+01:00  INFO 78534 --- [SmartShop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-02T11:59:34.867+01:00  INFO 78534 --- [SmartShop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-02T11:59:35.340+01:00  INFO 78534 --- [SmartShop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-02T11:59:35.380+01:00  INFO 78534 --- [SmartShop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-02T11:59:35.559+01:00  INFO 78534 --- [SmartShop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a6dffdb
+2025-12-02T11:59:35.561+01:00  INFO 78534 --- [SmartShop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-02T11:59:35.610+01:00  WARN 78534 --- [SmartShop] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-02T11:59:35.645+01:00  INFO 78534 --- [SmartShop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/smartshop_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.14
+	Default catalog/schema: smartshop_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-02T11:59:36.718+01:00  INFO 78534 --- [SmartShop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-02T11:59:36.969+01:00  INFO 78534 --- [SmartShop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T11:59:37.057+01:00  INFO 78534 --- [SmartShop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-02T11:59:37.855+01:00  WARN 78534 --- [SmartShop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-02T11:59:38.203+01:00  INFO 78534 --- [SmartShop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2025-12-02T11:59:38.207+01:00  INFO 78534 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Started SmartShopApplication in 5.295 seconds (process running for 6.047)
+2025-12-02T12:00:31.939+01:00  INFO 78534 --- [SmartShop] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-02T12:00:31.940+01:00  INFO 78534 --- [SmartShop] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-02T12:00:31.942+01:00  INFO 78534 --- [SmartShop] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-02T12:00:32.072+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-1] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false)
+2025-12-02T12:01:07.016+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.created_at,c1_0.deleted,c1_0.deleted_at,c1_0.loyalty_level,u1_0.id,u1_0.created_at,u1_0.deleted,u1_0.deleted_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.role from clients c1_0 left join users u1_0 on u1_0.id=c1_0.user_id and (u1_0.deleted = false) where c1_0.id=? and (c1_0.deleted = false)
+2025-12-02T12:01:07.042+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-3] org.hibernate.SQL                        : select p1_0.id,p1_0.created_at,p1_0.deleted,p1_0.deleted_at,p1_0.name,p1_0.stock,p1_0.unit_price from products p1_0 where p1_0.id=? and (p1_0.deleted = false)
+2025-12-02T12:01:07.110+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-3] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false) and pc1_0.code=?
+2025-12-02T12:01:07.121+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-3] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false) and pc1_0.code=?
+2025-12-02T12:01:07.125+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-3] c.a.s.service.impl.DiscountServiceImpl   : im inside Discount service
+2025-12-02T12:01:07.125+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-3] c.a.s.service.impl.DiscountServiceImpl   : subtotal 10000.0
+2025-12-02T12:01:07.147+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-3] org.hibernate.SQL                        : insert into orders (vat,client_id,created_at,deleted,deleted_at,discount,order_date,promo_code_id,remaining,status,subtotal,total,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-02T12:01:07.169+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-3] org.hibernate.SQL                        : insert into order_items (created_at,order_id,product_id,quantity,total_line,id) values (?,?,?,?,?,?)
+2025-12-02T12:02:11.264+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-6] org.hibernate.SQL                        : select c1_0.id,c1_0.created_at,c1_0.deleted,c1_0.deleted_at,c1_0.loyalty_level,u1_0.id,u1_0.created_at,u1_0.deleted,u1_0.deleted_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.role from clients c1_0 left join users u1_0 on u1_0.id=c1_0.user_id and (u1_0.deleted = false) where c1_0.id=? and (c1_0.deleted = false)
+2025-12-02T12:02:11.270+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-6] org.hibernate.SQL                        : select p1_0.id,p1_0.created_at,p1_0.deleted,p1_0.deleted_at,p1_0.name,p1_0.stock,p1_0.unit_price from products p1_0 where p1_0.id=? and (p1_0.deleted = false)
+2025-12-02T12:02:11.274+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-6] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false) and pc1_0.code=?
+2025-12-02T12:02:20.332+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-7] org.hibernate.SQL                        : select c1_0.id,c1_0.created_at,c1_0.deleted,c1_0.deleted_at,c1_0.loyalty_level,u1_0.id,u1_0.created_at,u1_0.deleted,u1_0.deleted_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.role from clients c1_0 left join users u1_0 on u1_0.id=c1_0.user_id and (u1_0.deleted = false) where c1_0.id=? and (c1_0.deleted = false)
+2025-12-02T12:02:20.337+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-7] org.hibernate.SQL                        : select p1_0.id,p1_0.created_at,p1_0.deleted,p1_0.deleted_at,p1_0.name,p1_0.stock,p1_0.unit_price from products p1_0 where p1_0.id=? and (p1_0.deleted = false)
+2025-12-02T12:02:20.342+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-7] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false) and pc1_0.code=?
+2025-12-02T12:02:20.346+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-7] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false) and pc1_0.code=?
+2025-12-02T12:02:20.349+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-7] c.a.s.service.impl.DiscountServiceImpl   : im inside Discount service
+2025-12-02T12:02:20.350+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-7] c.a.s.service.impl.DiscountServiceImpl   : subtotal 10000.0
+2025-12-02T12:02:20.351+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-7] org.hibernate.SQL                        : insert into orders (vat,client_id,created_at,deleted,deleted_at,discount,order_date,promo_code_id,remaining,status,subtotal,total,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-02T12:02:20.355+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-7] org.hibernate.SQL                        : insert into order_items (created_at,order_id,product_id,quantity,total_line,id) values (?,?,?,?,?,?)
+2025-12-02T12:03:43.599+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-10] org.hibernate.SQL                        : select c1_0.id,c1_0.created_at,c1_0.deleted,c1_0.deleted_at,c1_0.loyalty_level,u1_0.id,u1_0.created_at,u1_0.deleted,u1_0.deleted_at,u1_0.email,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.role from clients c1_0 left join users u1_0 on u1_0.id=c1_0.user_id and (u1_0.deleted = false) where c1_0.id=? and (c1_0.deleted = false)
+2025-12-02T12:03:43.603+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-10] org.hibernate.SQL                        : select p1_0.id,p1_0.created_at,p1_0.deleted,p1_0.deleted_at,p1_0.name,p1_0.stock,p1_0.unit_price from products p1_0 where p1_0.id=? and (p1_0.deleted = false)
+2025-12-02T12:03:43.608+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-10] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false) and pc1_0.code=?
+2025-12-02T12:03:43.616+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-10] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false) and pc1_0.code=?
+2025-12-02T12:03:43.619+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-10] c.a.s.service.impl.DiscountServiceImpl   : im inside Discount service
+2025-12-02T12:03:43.619+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-10] c.a.s.service.impl.DiscountServiceImpl   : subtotal 20000.0
+2025-12-02T12:03:43.621+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-10] org.hibernate.SQL                        : insert into orders (vat,client_id,created_at,deleted,deleted_at,discount,order_date,promo_code_id,remaining,status,subtotal,total,id) values (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-12-02T12:03:43.626+01:00 DEBUG 78534 --- [SmartShop] [http-nio-8081-exec-10] org.hibernate.SQL                        : insert into order_items (created_at,order_id,product_id,quantity,total_line,id) values (?,?,?,?,?,?)
+2025-12-02T12:06:00.604+01:00  INFO 78534 --- [SmartShop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-02T12:06:00.614+01:00  INFO 78534 --- [SmartShop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2025-12-02T12:06:00.621+01:00  INFO 78534 --- [SmartShop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T12:06:00.623+01:00  INFO 78534 --- [SmartShop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-02T12:06:00.625+01:00  INFO 78534 --- [SmartShop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-02T12:06:04.811+01:00  INFO 79348 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Starting SmartShopApplication using Java 17.0.17 with PID 79348 (/Users/aliyara/Documents/Java/Spring-Boot/SmartShop/target/classes started by aliyara in /Users/aliyara/Documents/Java/Spring-Boot/SmartShop)
+2025-12-02T12:06:04.813+01:00 DEBUG 79348 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-02T12:06:04.815+01:00  INFO 79348 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-12-02T12:06:05.554+01:00  INFO 79348 --- [SmartShop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-02T12:06:05.633+01:00  INFO 79348 --- [SmartShop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 6 JPA repository interfaces.
+2025-12-02T12:06:06.056+01:00  INFO 79348 --- [SmartShop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-12-02T12:06:06.069+01:00  INFO 79348 --- [SmartShop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-02T12:06:06.070+01:00  INFO 79348 --- [SmartShop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-02T12:06:06.112+01:00  INFO 79348 --- [SmartShop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1258 ms
+2025-12-02T12:06:06.274+01:00  INFO 79348 --- [SmartShop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-02T12:06:06.332+01:00  INFO 79348 --- [SmartShop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-02T12:06:06.762+01:00  INFO 79348 --- [SmartShop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-02T12:06:06.802+01:00  INFO 79348 --- [SmartShop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-02T12:06:06.983+01:00  INFO 79348 --- [SmartShop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@538e74fc
+2025-12-02T12:06:06.985+01:00  INFO 79348 --- [SmartShop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-02T12:06:07.025+01:00  WARN 79348 --- [SmartShop] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-02T12:06:07.065+01:00  INFO 79348 --- [SmartShop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/smartshop_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.14
+	Default catalog/schema: smartshop_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-02T12:06:08.094+01:00  INFO 79348 --- [SmartShop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-02T12:06:08.287+01:00  INFO 79348 --- [SmartShop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T12:06:08.369+01:00  INFO 79348 --- [SmartShop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-02T12:06:09.208+01:00  WARN 79348 --- [SmartShop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-02T12:06:09.595+01:00  INFO 79348 --- [SmartShop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2025-12-02T12:06:09.603+01:00  INFO 79348 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Started SmartShopApplication in 5.208 seconds (process running for 5.846)
+2025-12-02T12:06:18.652+01:00  INFO 79348 --- [SmartShop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-02T12:06:18.667+01:00  INFO 79348 --- [SmartShop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2025-12-02T12:06:18.674+01:00  INFO 79348 --- [SmartShop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T12:06:18.676+01:00  INFO 79348 --- [SmartShop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-02T12:06:18.679+01:00  INFO 79348 --- [SmartShop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-12-02T12:06:21.142+01:00  INFO 79392 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Starting SmartShopApplication using Java 17.0.17 with PID 79392 (/Users/aliyara/Documents/Java/Spring-Boot/SmartShop/target/classes started by aliyara in /Users/aliyara/Documents/Java/Spring-Boot/SmartShop)
+2025-12-02T12:06:21.145+01:00 DEBUG 79392 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Running with Spring Boot v4.0.0, Spring v7.0.1
+2025-12-02T12:06:21.145+01:00  INFO 79392 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-12-02T12:06:21.790+01:00  INFO 79392 --- [SmartShop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-02T12:06:21.858+01:00  INFO 79392 --- [SmartShop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
+2025-12-02T12:06:22.224+01:00  INFO 79392 --- [SmartShop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2025-12-02T12:06:22.235+01:00  INFO 79392 --- [SmartShop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-02T12:06:22.236+01:00  INFO 79392 --- [SmartShop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2025-12-02T12:06:22.273+01:00  INFO 79392 --- [SmartShop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1083 ms
+2025-12-02T12:06:22.423+01:00  INFO 79392 --- [SmartShop] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-02T12:06:22.479+01:00  INFO 79392 --- [SmartShop] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2025-12-02T12:06:22.886+01:00  INFO 79392 --- [SmartShop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-02T12:06:22.919+01:00  INFO 79392 --- [SmartShop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-02T12:06:23.066+01:00  INFO 79392 --- [SmartShop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@72f24a84
+2025-12-02T12:06:23.067+01:00  INFO 79392 --- [SmartShop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-02T12:06:23.101+01:00  WARN 79392 --- [SmartShop] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-02T12:06:23.128+01:00  INFO 79392 --- [SmartShop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/smartshop_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.14
+	Default catalog/schema: smartshop_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-02T12:06:24.113+01:00  INFO 79392 --- [SmartShop] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-02T12:06:24.136+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : set client_min_messages = WARNING
+2025-12-02T12:06:24.141+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists clients drop constraint if exists FKtiuqdledq2lybrds2k3rfqrv4
+2025-12-02T12:06:24.158+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists order_items drop constraint if exists FKbioxgbv59vetrxe0ejfubep1w
+2025-12-02T12:06:24.163+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists order_items drop constraint if exists FKocimc7dtr037rh4ls4l95nlfi
+2025-12-02T12:06:24.168+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists orders drop constraint if exists FKm2dep9derpoaehshbkkatam3v
+2025-12-02T12:06:24.173+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists orders drop constraint if exists FKwlo1wcmsoggpqbgv2kp1ndx7
+2025-12-02T12:06:24.177+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : drop table if exists clients cascade
+2025-12-02T12:06:24.195+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : drop table if exists order_items cascade
+2025-12-02T12:06:24.202+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : drop table if exists orders cascade
+2025-12-02T12:06:24.208+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : drop table if exists payments cascade
+2025-12-02T12:06:24.216+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : drop table if exists products cascade
+2025-12-02T12:06:24.224+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : drop table if exists promo_codes cascade
+2025-12-02T12:06:24.234+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : drop table if exists users cascade
+2025-12-02T12:06:24.246+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : create table clients (deleted boolean, created_at timestamp(6), deleted_at timestamp(6), id uuid not null, user_id uuid unique, loyalty_level varchar(255) not null check ((loyalty_level in ('BASIC','SILVER','GOLD','PLATINUM'))), primary key (id))
+2025-12-02T12:06:24.275+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : create table order_items (quantity integer not null, total_line float(53) not null, created_at timestamp(6), id uuid not null, order_id uuid, product_id uuid, primary key (id))
+2025-12-02T12:06:24.284+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : create table orders (deleted boolean, discount float(53) not null, remaining float(53) not null, subtotal float(53) not null, total float(53) not null, vat float(53) not null, created_at timestamp(6), deleted_at timestamp(6), order_date timestamp(6) not null, client_id uuid, id uuid not null, promo_code_id uuid, status varchar(255) not null check ((status in ('PENDING','CONFIRMED','CANCELED','REJECTED'))), primary key (id))
+2025-12-02T12:06:24.293+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : create table payments (amount float(53) not null, deleted boolean, collection_date timestamp(6) not null, created_at timestamp(6), deleted_at timestamp(6), payment_date timestamp(6) not null, id uuid not null, payment_status varchar(255) not null check ((payment_status in ('PENDING','CASHED','REJECTED'))), payment_type varchar(255) not null check ((payment_type in ('CASH','CHECK','TRANSFER'))), primary key (id))
+2025-12-02T12:06:24.305+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : create table products (deleted boolean, stock integer not null, unit_price float(53) not null, created_at timestamp(6), deleted_at timestamp(6), id uuid not null, name varchar(255) not null unique, primary key (id))
+2025-12-02T12:06:24.321+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : create table promo_codes (active boolean not null, deleted boolean, discount_value float(53), end_date date, max_usage integer not null, used_count integer, created_at timestamp(6), deleted_at timestamp(6), id uuid not null, code varchar(255) not null unique, discount_type varchar(255) not null check ((discount_type in ('PERCENTAGE','FIXED'))), primary key (id))
+2025-12-02T12:06:24.337+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : create table users (deleted boolean, created_at timestamp(6), deleted_at timestamp(6), id uuid not null, email varchar(255) not null unique, first_name varchar(255) not null, last_name varchar(255), password varchar(255) not null, role varchar(255) not null check ((role in ('ADMIN','CLIENT'))), primary key (id))
+2025-12-02T12:06:24.354+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists clients add constraint FKtiuqdledq2lybrds2k3rfqrv4 foreign key (user_id) references users
+2025-12-02T12:06:24.364+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists order_items add constraint FKbioxgbv59vetrxe0ejfubep1w foreign key (order_id) references orders
+2025-12-02T12:06:24.373+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists order_items add constraint FKocimc7dtr037rh4ls4l95nlfi foreign key (product_id) references products
+2025-12-02T12:06:24.378+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists orders add constraint FKm2dep9derpoaehshbkkatam3v foreign key (client_id) references clients
+2025-12-02T12:06:24.385+01:00 DEBUG 79392 --- [SmartShop] [main] org.hibernate.SQL                        : alter table if exists orders add constraint FKwlo1wcmsoggpqbgv2kp1ndx7 foreign key (promo_code_id) references promo_codes
+2025-12-02T12:06:24.395+01:00  INFO 79392 --- [SmartShop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T12:06:24.482+01:00  INFO 79392 --- [SmartShop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-02T12:06:25.269+01:00  WARN 79392 --- [SmartShop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-02T12:06:25.600+01:00  INFO 79392 --- [SmartShop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2025-12-02T12:06:25.606+01:00  INFO 79392 --- [SmartShop] [main] c.a.smartshop.SmartShopApplication       : Started SmartShopApplication in 4.923 seconds (process running for 5.647)
+2025-12-02T12:06:37.623+01:00  INFO 79392 --- [SmartShop] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-02T12:06:37.623+01:00  INFO 79392 --- [SmartShop] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-02T12:06:37.625+01:00  INFO 79392 --- [SmartShop] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-02T12:06:37.738+01:00 DEBUG 79392 --- [SmartShop] [http-nio-8081-exec-1] org.hibernate.SQL                        : select pc1_0.id,pc1_0.active,pc1_0.code,pc1_0.created_at,pc1_0.deleted,pc1_0.deleted_at,pc1_0.discount_type,pc1_0.discount_value,pc1_0.end_date,pc1_0.max_usage,pc1_0.used_count from promo_codes pc1_0 where (pc1_0.deleted = false)
+2025-12-02T12:06:41.887+01:00 DEBUG 79392 --- [SmartShop] [http-nio-8081-exec-3] org.hibernate.SQL                        : insert into promo_codes (active,code,created_at,deleted,deleted_at,discount_type,discount_value,end_date,max_usage,used_count,id) values (?,?,?,?,?,?,?,?,?,?,?)
+2025-12-02T12:11:21.183+01:00 DEBUG 79392 --- [SmartShop] [http-nio-8081-exec-6] org.hibernate.SQL                        : insert into promo_codes (active,code,created_at,deleted,deleted_at,discount_type,discount_value,end_date,max_usage,used_count,id) values (?,?,?,?,?,?,?,?,?,?,?)
+2025-12-02T12:11:21.195+01:00  WARN 79392 --- [SmartShop] [http-nio-8081-exec-6] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23505
+2025-12-02T12:11:21.195+01:00  WARN 79392 --- [SmartShop] [http-nio-8081-exec-6] org.hibernate.orm.jdbc.error             : ERROR: duplicate key value violates unique constraint "promo_codes_code_key"
+  Detail: Key (code)=(PROMO-000) already exists.
+2025-12-02T12:11:27.961+01:00 DEBUG 79392 --- [SmartShop] [http-nio-8081-exec-8] org.hibernate.SQL                        : insert into promo_codes (active,code,created_at,deleted,deleted_at,discount_type,discount_value,end_date,max_usage,used_count,id) values (?,?,?,?,?,?,?,?,?,?,?)
+2025-12-02T12:11:53.425+01:00  INFO 79392 --- [SmartShop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-02T12:11:53.436+01:00  INFO 79392 --- [SmartShop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2025-12-02T12:11:53.441+01:00  INFO 79392 --- [SmartShop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-02T12:11:53.442+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : set client_min_messages = WARNING
+2025-12-02T12:11:53.445+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists clients drop constraint if exists FKtiuqdledq2lybrds2k3rfqrv4
+2025-12-02T12:11:53.452+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists order_items drop constraint if exists FKbioxgbv59vetrxe0ejfubep1w
+2025-12-02T12:11:53.456+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists order_items drop constraint if exists FKocimc7dtr037rh4ls4l95nlfi
+2025-12-02T12:11:53.460+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists orders drop constraint if exists FKm2dep9derpoaehshbkkatam3v
+2025-12-02T12:11:53.465+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : alter table if exists orders drop constraint if exists FKwlo1wcmsoggpqbgv2kp1ndx7
+2025-12-02T12:11:53.469+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists clients cascade
+2025-12-02T12:11:53.477+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists order_items cascade
+2025-12-02T12:11:53.482+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists orders cascade
+2025-12-02T12:11:53.489+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists payments cascade
+2025-12-02T12:11:53.494+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists products cascade
+2025-12-02T12:11:53.500+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists promo_codes cascade
+2025-12-02T12:11:53.507+01:00 DEBUG 79392 --- [SmartShop] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists users cascade
+2025-12-02T12:11:53.516+01:00  INFO 79392 --- [SmartShop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-02T12:11:53.518+01:00  INFO 79392 --- [SmartShop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
