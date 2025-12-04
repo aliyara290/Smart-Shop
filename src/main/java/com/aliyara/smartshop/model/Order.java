@@ -56,8 +56,11 @@ public class Order {
     @JoinColumn(name = "client_id")
     private Client client;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "order")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Payment> payments = new ArrayList<>();
 
     @Column(name = "deleted")
     private boolean deleted;
@@ -72,6 +75,9 @@ public class Order {
         orderItems.add(orderItem);
     }
 
+    public void addPayment(Payment payment) {
+        payments.add(payment);
+    }
 
     @PrePersist
     public void updateCreatedAt() {

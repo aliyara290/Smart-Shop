@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.UUID;
 
 public interface PaymentService {
-    PaymentResponseDTO create(PaymentRequestDTO requestDTO);
+    PaymentResponseDTO pay(PaymentRequestDTO requestDTO, UUID orderId);
     PaymentResponseDTO update(PaymentRequestDTO requestDTO, UUID id);
-    ApiResponse<Void> delete(UUID id);
     PaymentResponseDTO findById(UUID id);
     List<PaymentResponseDTO> getAllPayments();
+    double checkOrderRemainingAmount(UUID orderId);
 }
 

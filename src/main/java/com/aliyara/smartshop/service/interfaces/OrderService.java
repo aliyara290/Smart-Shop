@@ -2,6 +2,7 @@ package com.aliyara.smartshop.service.interfaces;
 
 import com.aliyara.smartshop.dto.request.OrderRequestDTO;
 import com.aliyara.smartshop.dto.response.OrderResponseDTO;
+import com.aliyara.smartshop.model.Order;
 import com.aliyara.smartshop.payload.ApiResponse;
 
 import java.util.List;
@@ -13,5 +14,6 @@ public interface OrderService {
     ApiResponse<Void> softDelete(UUID id);
     OrderResponseDTO findById(UUID id);
     List<OrderResponseDTO> getAllOrders();
+    void decreaseProductsStock(Order order);
 }
 

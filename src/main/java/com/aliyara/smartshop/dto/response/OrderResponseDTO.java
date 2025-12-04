@@ -11,11 +11,13 @@ public record OrderResponseDTO(
         UUID id,
         double subtotal,
         double discount,
+        double remaining,
         double total,
         double VAT,
         String promoCode,
         String status,
         List<OrderItemResponseDTO> orderItems,
+        List<PaymentResponseDTO> payments,
         LocalDateTime createdAt
 ) {
 }

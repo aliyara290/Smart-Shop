@@ -35,4 +35,22 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }
 
+    @ExceptionHandler(InsufficientStockException.class)
+    public ResponseEntity<ApiResponse<Void>> handleInsufficientStock(InsufficientStockException ex) {
+        ApiResponse<Void> response = new ApiResponse<>(false, ex.getMessage(), LocalDateTime.now(), null);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+    }
+
+    @ExceptionHandler(MissingFieldException.class)
+    public ResponseEntity<ApiResponse<Void>> handleMissingField(MissingFieldException ex) {
+        ApiResponse<Void> response = new ApiResponse<>(false, ex.getMessage(), LocalDateTime.now(), null);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+    }
+
+    @ExceptionHandler(PaymentExceedsRemainingException.class)
+    public ResponseEntity<ApiResponse<Void>> handlePaymentExceedsRemaining(PaymentExceedsRemainingException ex) {
+        ApiResponse<Void> response = new ApiResponse<>(false, ex.getMessage(), LocalDateTime.now(), null);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+    }
+
 }

@@ -28,7 +28,6 @@ public interface OrderMapper {
             @Mapping(target = "VAT", ignore = true),
             @Mapping(target = "total", ignore = true),
             @Mapping(target = "status", ignore = true),
-            @Mapping(target = "remaining", ignore = true),
             @Mapping(target = "client", ignore = true),
             @Mapping(target = "deleted", ignore = true),
             @Mapping(target = "deletedAt", ignore = true),

@@ -1,6 +1,6 @@
 package com.aliyara.smartshop.enums;
 
-public enum PaymentType {
+public enum PaymentMethod {
     CASH,
     CHECK,
     TRANSFER
