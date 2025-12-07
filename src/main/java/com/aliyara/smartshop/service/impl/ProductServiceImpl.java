@@ -11,6 +11,9 @@ import com.aliyara.smartshop.service.interfaces.ProductService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -61,8 +64,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductResponseDTO> getAllProducts() {
-        List<Product> products = productRepository.findAll();
+    public List<ProductResponseDTO> getAllProducts(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size) ;
+        Page<Product> products = productRepository.findAll(pageable);
         return products.stream().map(productMapper::toResponse).toList();
     }
 }

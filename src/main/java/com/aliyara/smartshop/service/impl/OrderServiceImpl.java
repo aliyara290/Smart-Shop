@@ -4,6 +4,7 @@ import com.aliyara.smartshop.dto.request.OrderItemRequestDTO;
 import com.aliyara.smartshop.dto.request.OrderRequestDTO;
 import com.aliyara.smartshop.dto.response.OrderResponseDTO;
 import com.aliyara.smartshop.enums.OrderStatus;
+import com.aliyara.smartshop.exception.InsufficientStockException;
 import com.aliyara.smartshop.exception.ResourceNotFoundException;
 import com.aliyara.smartshop.mapper.OrderMapper;
 import com.aliyara.smartshop.model.*;
@@ -16,7 +17,7 @@ import com.aliyara.smartshop.service.interfaces.ClientService;
 import com.aliyara.smartshop.service.interfaces.DiscountService;
 import com.aliyara.smartshop.service.interfaces.OrderService;
 import com.aliyara.smartshop.service.interfaces.PromoCodeService;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +26,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 @Slf4j
@@ -48,14 +50,16 @@ public class OrderServiceImpl implements OrderService {
     public OrderResponseDTO create(OrderRequestDTO requestDTO) {
         Order order = new Order();
         order.setVAT(vat);
-        Client client = clientRepository.findById(requestDTO.getClientId()).orElseThrow(() -> new ResourceNotFoundException("Client not found!"));
+        Client client = clientRepository.findById(requestDTO.getClientId())
+                .orElseThrow(() -> new ResourceNotFoundException("Client not found!"));
         clientService.updateClientLoyaltyLevel(client);
         order.setClient(client);
 
         double subtotal = 0.0;
 
         for (OrderItemRequestDTO orderItem : requestDTO.getOrderItems()) {
-            Product product = productRepository.findById(orderItem.getProductId()).orElseThrow(() -> new ResourceNotFoundException("Product with ID" + orderItem.getProductId() + " not found!"));
+            Product product = productRepository.findById(orderItem.getProductId())
+                    .orElseThrow(() -> new ResourceNotFoundException("Product with ID" + orderItem.getProductId() + " not found!"));
 
             OrderItem item = new OrderItem();
             item.setQuantity(orderItem.getQuantity());
@@ -72,11 +76,13 @@ public class OrderServiceImpl implements OrderService {
             boolean isPromoCodeValid = promoCodeService.checkIfPromoCodeValid(requestDTO.getPromoCode());
             if (isPromoCodeValid) {
                 PromoCode promoCode = promoCodeRepository.findByCode(requestDTO.getPromoCode()).get();
+                promoCode.setUsedCount(promoCode.getUsedCount() + 1);
                 order.setPromoCode(promoCode);
-                double discount = discountService.calculateDiscount(order);
-                order.setDiscount(discount);
             }
         }
+
+        double discount = discountService.calculateDiscount(order);
+        order.setDiscount(discount);
 
         log.debug("subtotal now: {}", order.getSubtotal());
         double VAT = (order.getSubtotal() - order.getDiscount()) * (order.getVAT() / 100.0);
@@ -118,19 +124,22 @@ public class OrderServiceImpl implements OrderService {
 
         order.setSubtotal(subtotal);
 
-        if (requestDTO.getPromoCode() != null) {
+        if (requestDTO.getPromoCode() != null && !Objects.equals(order.getPromoCode().getCode(), requestDTO.getPromoCode())) {
+            if(order.getPromoCode() != null) {
+                PromoCode oldPromoCode = order.getPromoCode();
+                oldPromoCode.setUsedCount(oldPromoCode.getUsedCount() - 1);
+                promoCodeRepository.save(oldPromoCode);
+            }
             boolean isPromoCodeValid = promoCodeService.checkIfPromoCodeValid(requestDTO.getPromoCode());
             if (isPromoCodeValid) {
                 PromoCode promoCode = promoCodeRepository.findByCode(requestDTO.getPromoCode()).orElseThrow(() -> new ResourceNotFoundException("Promo code not found!"));
-
+                promoCode.setUsedCount(promoCode.getUsedCount() + 1);
                 order.setPromoCode(promoCode);
-                double discount = discountService.calculateDiscount(order);
-                order.setDiscount(discount);
             }
-        } else {
-            order.setPromoCode(null);
-            order.setDiscount(0.0);
         }
+
+        double discount = discountService.calculateDiscount(order);
+        order.setDiscount(discount);
 
         double VAT = (order.getSubtotal() - order.getDiscount()) * (order.getVAT() / 100.0);
         double finalPrice = (order.getSubtotal() - order.getDiscount()) + VAT;
@@ -160,21 +169,25 @@ public class OrderServiceImpl implements OrderService {
         return orderMapper.toResponse(order);
     }
 
-
     @Override
     public List<OrderResponseDTO> getAllOrders() {
 
         return orderRepository.findAll().stream().map(orderMapper::toResponse).toList();
     }
 
-
+    @Transactional(noRollbackFor = InsufficientStockException.class)
     public void checkIfStockAvailable(Order order) {
         for (OrderItem orderItem : order.getOrderItems()) {
             Product product = orderItem.getProduct();
             if (product.getStock() < orderItem.getQuantity()) {
                 order.setStatus(OrderStatus.REJECTED);
+                if(order.getPromoCode() != null) {
+                    PromoCode promoCode = order.getPromoCode();
+                    promoCode.setUsedCount(promoCode.getUsedCount() - 1);
+                    order.setPromoCode(promoCode);
+                }
                 orderRepository.save(order);
-//                throw new InsufficientStockException("Not enough stock for product: " + product.getName());
+                throw new InsufficientStockException("Not enough stock for product: " + product.getName());
             }
         }
     }

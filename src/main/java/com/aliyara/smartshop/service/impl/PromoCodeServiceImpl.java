@@ -10,7 +10,7 @@ import com.aliyara.smartshop.model.PromoCode;
 import com.aliyara.smartshop.payload.ApiResponse;
 import com.aliyara.smartshop.repository.PromoCodeRepository;
 import com.aliyara.smartshop.service.interfaces.PromoCodeService;
-import jakarta.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -41,10 +41,10 @@ public class PromoCodeServiceImpl implements PromoCodeService {
     public PromoCodeResponseDTO update(PromoCodeRequestDTO requestDTO, UUID id) {
         PromoCode existingPromoCode = promoCodeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Promo code not exist!"));
-        promoCodeMapper.updatePromoCodeFromDTO(requestDTO,existingPromoCode);
+        promoCodeMapper.updatePromoCodeFromDTO(requestDTO, existingPromoCode);
 
-        if(requestDTO.getCode() != null) {
-            if(promoCodeRepository.existsPromoCodeByCode(requestDTO.getCode())) {
+        if (requestDTO.getCode() != null) {
+            if (promoCodeRepository.existsPromoCodeByCode(requestDTO.getCode())) {
                 throw new DuplicateResourceException("The code is already exist! try another one!");
             }
             existingPromoCode.setCode(requestDTO.getCode());
@@ -74,26 +74,25 @@ public class PromoCodeServiceImpl implements PromoCodeService {
         return promoCodeMapper.toResponse(promoCode);
     }
 
+    @Transactional(noRollbackFor = ExpiredPromoCodeException.class)
     @Override
     public boolean checkIfPromoCodeValid(String code) {
         PromoCode promoCode = promoCodeRepository.findByCode(code)
                 .orElseThrow(() -> new ResourceNotFoundException("Promo code not exist!"));
 
-        if(promoCode.getUsedCount() == promoCode.getMaxUsage()) {
+        boolean isExpired =
+                !promoCode.isActive() ||
+                        promoCode.getUsedCount() >= promoCode.getMaxUsage() ||
+                        promoCode.getEndDate().isBefore(LocalDate.now()) ||
+                        promoCode.isDeleted();
+
+        if (isExpired) {
+            promoCode.setActive(false);
+            promoCodeRepository.save(promoCode);
             throw new ExpiredPromoCodeException();
         }
 
-        if(promoCode.getEndDate().isBefore(LocalDate.now())) {
-            throw new ExpiredPromoCodeException();
-        }
-
-        if(!promoCode.isActive()) {
-            throw new ExpiredPromoCodeException();
-        }
-
-        if(promoCode.isDeleted()) {
-            throw new ExpiredPromoCodeException();
-        }
         return true;
     }
+
 }

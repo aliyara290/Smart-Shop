@@ -5,6 +5,7 @@ import com.aliyara.smartshop.dto.response.ProductResponseDTO;
 import com.aliyara.smartshop.payload.ApiResponse;
 import com.aliyara.smartshop.service.interfaces.ProductService;
 import jakarta.validation.Valid;
+import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +17,7 @@ import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/products")
+@RequestMapping("/api/v1/admin/products")
 public class ProductController {
     private final ProductService productService;
 
@@ -48,8 +49,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<ProductResponseDTO>>> getAllProducts() {
-        List<ProductResponseDTO> products = productService.getAllProducts();
+    public ResponseEntity<ApiResponse<List<ProductResponseDTO>>> getAllProducts(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "6") int size) {
+        List<ProductResponseDTO> products = productService.getAllProducts(page, size);
         ApiResponse<List<ProductResponseDTO>> response = new ApiResponse<>(true, "Products fetched successfully!", LocalDateTime.now(), products);
         return ResponseEntity.ok().body(response);
     }

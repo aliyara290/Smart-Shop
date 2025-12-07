@@ -16,7 +16,7 @@ import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/promo-codes")
+@RequestMapping("/api/v1/admin/promo-codes")
 public class PromoCodeController {
     
     private final PromoCodeService promoCodeService;

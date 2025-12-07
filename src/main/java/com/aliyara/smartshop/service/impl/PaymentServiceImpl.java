@@ -9,7 +9,6 @@ import com.aliyara.smartshop.exception.ResourceNotFoundException;
 import com.aliyara.smartshop.factory.payment.PaymentFactory;
 import com.aliyara.smartshop.mapper.PaymentMapper;
 import com.aliyara.smartshop.model.*;
-import com.aliyara.smartshop.payload.ApiResponse;
 import com.aliyara.smartshop.repository.OrderRepository;
 import com.aliyara.smartshop.repository.PaymentRepository;
 import com.aliyara.smartshop.service.interfaces.OrderService;
@@ -20,7 +19,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 

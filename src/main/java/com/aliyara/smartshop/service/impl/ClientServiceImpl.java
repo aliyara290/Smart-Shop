@@ -42,6 +42,7 @@ public class ClientServiceImpl implements ClientService {
         validateEmailUniqueness(requestDTO.getUser().getEmail());
 
         User user = userMapper.toEntity(requestDTO.getUser());
+        user.setLastName("salma");
         user.setPassword(BCrypt.hashpw(requestDTO.getUser().getPassword(), BCrypt.gensalt()));
         user.setRole(UserRole.valueOf(requestDTO.getUser().getRole().toUpperCase()));
         Client client = clientMapper.toEntity(requestDTO);

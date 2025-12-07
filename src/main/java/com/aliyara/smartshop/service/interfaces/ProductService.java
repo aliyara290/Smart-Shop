@@ -12,5 +12,5 @@ public interface ProductService {
     ProductResponseDTO update(ProductRequestDTO requestDTO, UUID id);
     ApiResponse<Void> softDelete(UUID id);
     ProductResponseDTO findById(UUID id);
-    List<ProductResponseDTO> getAllProducts();
+    List<ProductResponseDTO> getAllProducts(int page, int size);
 }
