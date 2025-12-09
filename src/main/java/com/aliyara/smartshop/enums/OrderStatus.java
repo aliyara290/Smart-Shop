@@ -1,8 +1,9 @@
-package com.aliyara.smartshop.model.enums;
+package com.aliyara.smartshop.enums;
 
 public enum OrderStatus {
     PENDING,
     CONFIRMED,
     CANCELED,
-    REJECTED
+    REJECTED,
+    PARTIAL_PAID
 }

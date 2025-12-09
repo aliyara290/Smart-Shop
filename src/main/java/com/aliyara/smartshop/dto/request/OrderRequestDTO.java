@@ -1,16 +1,17 @@
 package com.aliyara.smartshop.dto.request;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Getter
 @Setter
 public class OrderRequestDTO {
     private String promoCode;
+    private UUID clientId;
     private List<OrderItemRequestDTO> orderItems;
 }

@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v1/clients")
+@RequestMapping("/api/v1/admin/clients")
 public class ClientController {
     private final ClientService clientService;
 
@@ -27,20 +28,20 @@ public class ClientController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ApiResponse<ClientResponseDTO>> updateClient(@Valid @RequestBody ClientRequestDTO requestDTO, @PathVariable String id) {
+    public ResponseEntity<ApiResponse<ClientResponseDTO>> updateClient(@Valid @RequestBody ClientRequestDTO requestDTO, @PathVariable UUID id) {
         ClientResponseDTO updatedClient = clientService.update(requestDTO, id);
         ApiResponse<ClientResponseDTO> response = new ApiResponse<>(true, "Client updated successfully", LocalDateTime.now(), updatedClient);
         return ResponseEntity.ok().body(response);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<ApiResponse<Void>> deleteClient(@PathVariable String id) {
+    public ResponseEntity<ApiResponse<Void>> deleteClient(@PathVariable UUID id) {
         ApiResponse<Void> deletedClient = clientService.softDelete(id);
         return ResponseEntity.ok().body(deletedClient);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ApiResponse<ClientResponseDTO>> getClient(@PathVariable String id) {
+    public ResponseEntity<ApiResponse<ClientResponseDTO>> getClient(@PathVariable UUID id) {
         ClientResponseDTO client = clientService.findById(id);
         ApiResponse<ClientResponseDTO> response = new ApiResponse<>(true, "Client fetched successfully!", LocalDateTime.now(), client);
         return ResponseEntity.ok().body(response);
