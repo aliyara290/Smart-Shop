@@ -49,7 +49,6 @@ public class PaymentServiceImpl implements PaymentService {
         payment.setOrder(order);
         payment.setAmount(requestDTO.getAmount());
 
-
         log.debug("cash: {}", requestDTO.getCashPayment());
 
         Object paymentMethod = null;
@@ -60,6 +59,7 @@ public class PaymentServiceImpl implements PaymentService {
                 payment.setCashPayment(cashPayment);
                 paymentMethod = cashPayment;
             }
+
             case CHECK -> {
                 CheckPayment checkPayment = new CheckPayment();
                 checkPayment.setCheckNumber(requestDTO.getCheckPayment().getCheckNumber());
@@ -68,6 +68,7 @@ public class PaymentServiceImpl implements PaymentService {
                 payment.setCheckPayment(checkPayment);
                 paymentMethod = checkPayment;
             }
+
             case TRANSFER -> {
                 TransferPayment transferPayment = new TransferPayment();
                 transferPayment.setBankName(requestDTO.getTransferPayment().getBankName());
@@ -176,7 +177,6 @@ public class PaymentServiceImpl implements PaymentService {
         return paymentMapper.toResponse(payment);
     }
 
-
     @Override
     public List<PaymentResponseDTO> getAllPayments() {
         return paymentRepository.findAll()
@@ -184,7 +184,6 @@ public class PaymentServiceImpl implements PaymentService {
                 .map(paymentMapper::toResponse)
                 .toList();
     }
-
 
     @Override
     public double checkOrderRemainingAmount(UUID orderId) {

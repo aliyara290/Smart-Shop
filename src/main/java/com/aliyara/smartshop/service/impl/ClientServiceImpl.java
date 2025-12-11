@@ -1,13 +1,18 @@
 package com.aliyara.smartshop.service.impl;
 
 import com.aliyara.smartshop.dto.request.ClientRequestDTO;
+import com.aliyara.smartshop.dto.response.ClientProfileResponseDTO;
 import com.aliyara.smartshop.dto.response.ClientResponseDTO;
+import com.aliyara.smartshop.dto.response.OrderResponseDTO;
 import com.aliyara.smartshop.enums.OrderStatus;
 import com.aliyara.smartshop.exception.DuplicateResourceException;
 import com.aliyara.smartshop.exception.ResourceNotFoundException;
 import com.aliyara.smartshop.mapper.ClientMapper;
+import com.aliyara.smartshop.mapper.ClientProfileMapper;
+import com.aliyara.smartshop.mapper.OrderMapper;
 import com.aliyara.smartshop.mapper.UserMapper;
 import com.aliyara.smartshop.model.Client;
+import com.aliyara.smartshop.model.Order;
 import com.aliyara.smartshop.model.User;
 import com.aliyara.smartshop.enums.ClientLoyaltyLevel;
 import com.aliyara.smartshop.enums.UserRole;
@@ -16,6 +21,8 @@ import com.aliyara.smartshop.repository.ClientRepository;
 import com.aliyara.smartshop.repository.OrderRepository;
 import com.aliyara.smartshop.repository.UserRepository;
 import com.aliyara.smartshop.service.interfaces.ClientService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +43,8 @@ public class ClientServiceImpl implements ClientService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
     private final ClientMapper clientMapper;
+    private final ClientProfileMapper clientProfileMapper;
+    private final OrderMapper orderMapper;
 
     @Override
     public ClientResponseDTO create(ClientRequestDTO requestDTO) {
@@ -116,5 +125,20 @@ public class ClientServiceImpl implements ClientService {
 
         log.debug("hello im here");
         clientRepository.save(client);
+    }
+
+    @Override
+    public ClientProfileResponseDTO getProfile(HttpSession session) {
+        UUID userId = (UUID) session.getAttribute("ID");
+        Client client = clientRepository.getClientByUserId(userId);
+        return clientProfileMapper.toResponse(client);
+    }
+
+    @Override
+    public List<OrderResponseDTO> getClientOrders(HttpSession session) {
+        UUID userId = (UUID) session.getAttribute("ID");
+        Client client = clientRepository.getClientByUserId(userId);
+        List<Order> clientOrders = client.getOrders();
+        return clientOrders.stream().map(orderMapper::toResponse).toList();
     }
 }

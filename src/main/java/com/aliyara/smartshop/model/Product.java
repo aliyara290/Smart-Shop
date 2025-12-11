@@ -45,5 +45,4 @@ public class Product {
     public void updateCreatedAt() {
         this.createdAt = LocalDateTime.now();
     }
-
 }

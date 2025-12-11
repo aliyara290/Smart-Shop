@@ -4,9 +4,11 @@ import com.aliyara.smartshop.dto.request.ProductRequestDTO;
 import com.aliyara.smartshop.dto.response.ProductResponseDTO;
 import com.aliyara.smartshop.payload.ApiResponse;
 import com.aliyara.smartshop.service.interfaces.ProductService;
+import jakarta.persistence.EntityManager;
 import jakarta.validation.Valid;
 import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +37,7 @@ public class ProductController {
         return ResponseEntity.ok().body(response);
     }
 
+
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<Void>> deleteProduct(@PathVariable UUID id) {
         ApiResponse<Void> deletedProduct = productService.softDelete(id);
@@ -49,9 +52,9 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<ApiResponse<List<ProductResponseDTO>>> getAllProducts(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "6") int size) {
-        List<ProductResponseDTO> products = productService.getAllProducts(page, size);
-        ApiResponse<List<ProductResponseDTO>> response = new ApiResponse<>(true, "Products fetched successfully!", LocalDateTime.now(), products);
+    public ResponseEntity<ApiResponse<Page<ProductResponseDTO>>> getAllProducts(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "6") int size) {
+        Page<ProductResponseDTO> products = productService.getAllProducts(page, size);
+        ApiResponse<Page<ProductResponseDTO>> response = new ApiResponse<>(true, "Products fetched successfully!", LocalDateTime.now(), products);
         return ResponseEntity.ok().body(response);
     }
 }

@@ -10,6 +10,7 @@ import com.aliyara.smartshop.model.PromoCode;
 import com.aliyara.smartshop.payload.ApiResponse;
 import com.aliyara.smartshop.repository.PromoCodeRepository;
 import com.aliyara.smartshop.service.interfaces.PromoCodeService;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

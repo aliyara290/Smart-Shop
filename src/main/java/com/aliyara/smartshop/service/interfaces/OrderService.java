@@ -15,5 +15,6 @@ public interface OrderService {
     OrderResponseDTO findById(UUID id);
     List<OrderResponseDTO> getAllOrders();
     void decreaseProductsStock(Order order);
+    List<OrderResponseDTO> ordersHaveNoPayment();
 }
 

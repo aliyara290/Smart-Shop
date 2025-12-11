@@ -53,7 +53,7 @@ public class AuthFilter implements Filter {
             }
         }
 
-        if (path.matches("/api/v1/client-account/.*")) {
+        if (path.matches("/api/v1/account/.*")) {
             if (role != UserRole.CLIENT) {
                 response.setStatus(HttpServletResponse.SC_FORBIDDEN);
                 response.getWriter().write("Access denied: Clients only");

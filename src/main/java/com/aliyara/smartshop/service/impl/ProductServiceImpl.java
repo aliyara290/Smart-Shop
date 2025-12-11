@@ -4,8 +4,11 @@ import com.aliyara.smartshop.dto.request.ProductRequestDTO;
 import com.aliyara.smartshop.dto.response.ProductResponseDTO;
 import com.aliyara.smartshop.exception.ResourceNotFoundException;
 import com.aliyara.smartshop.mapper.ProductMapper;
+import com.aliyara.smartshop.model.Order;
+import com.aliyara.smartshop.model.OrderItem;
 import com.aliyara.smartshop.model.Product;
 import com.aliyara.smartshop.payload.ApiResponse;
+import com.aliyara.smartshop.repository.OrderRepository;
 import com.aliyara.smartshop.repository.ProductRepository;
 import com.aliyara.smartshop.service.interfaces.ProductService;
 import jakarta.transaction.Transactional;
@@ -19,6 +22,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -28,6 +32,7 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
     private final ProductMapper productMapper;
+    private final OrderRepository orderRepository;
 
     @Override
     public ProductResponseDTO create(ProductRequestDTO requestDTO) {
@@ -64,9 +69,10 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductResponseDTO> getAllProducts(int page, int size) {
+    public Page<ProductResponseDTO> getAllProducts(int page, int size) {
         Pageable pageable = PageRequest.of(page, size) ;
         Page<Product> products = productRepository.findAll(pageable);
-        return products.stream().map(productMapper::toResponse).toList();
+        return products.map(productMapper::toResponse);
     }
+
 }
