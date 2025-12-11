@@ -54,4 +54,11 @@ public class OrderController {
         ApiResponse<List<OrderResponseDTO>> response = new ApiResponse<>(true, "Orders fetched successfully!", LocalDateTime.now(), orders);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/more-than-one")
+    public ResponseEntity<ApiResponse<List<OrderResponseDTO>>> getAllOrdersTwo() {
+        List<OrderResponseDTO> orders = orderService.ordersHaveNoPayment();
+        ApiResponse<List<OrderResponseDTO>> response = new ApiResponse<>(true, "Orders fetched successfully!", LocalDateTime.now(), orders);
+        return ResponseEntity.ok(response);
+    }
 }

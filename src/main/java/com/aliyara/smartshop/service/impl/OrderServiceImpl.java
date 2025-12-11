@@ -202,4 +202,13 @@ public class OrderServiceImpl implements OrderService {
         }
         productRepository.saveAll(productsToUpdate);
     }
+
+    @Override
+    public List<OrderResponseDTO> ordersHaveNoPayment() {
+        List<Order> orders = orderRepository.findAll();
+        return orders.stream()
+                .filter(o -> o.getPayments().isEmpty())
+                .map(orderMapper::toResponse)
+                .toList();
+    };
 }
