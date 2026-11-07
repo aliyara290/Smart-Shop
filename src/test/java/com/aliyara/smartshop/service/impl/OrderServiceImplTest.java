@@ -22,7 +22,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -79,7 +79,7 @@ class OrderServiceImplTest {
         testOrder.setSubtotal(200.0);
         testOrder.setTotal(240.0);
         testOrder.setStatus(OrderStatus.PENDING);
-        testOrder.setOrderItems(new ArrayList<>());
+        testOrder.setOrderItems(new HashSet<>());
     }
 
     @Test
